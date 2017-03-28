@@ -10,6 +10,7 @@ using prog35142.week11.security.Models;
 
 namespace prog35142.week11.security.Controllers
 {
+    [Authorize]
     public class SportsController : Controller
     {
         private OlympicsContext db = new OlympicsContext();
