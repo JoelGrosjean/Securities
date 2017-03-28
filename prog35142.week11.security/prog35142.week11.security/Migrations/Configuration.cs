@@ -35,8 +35,6 @@ namespace prog35142.week11.security.Migrations
                 userManager.Create(userToInsert, "student20!4");
                 userManager.AddToRole(userToInsert.Id, "Admin");
             }
-
-
         }
     }
 }
