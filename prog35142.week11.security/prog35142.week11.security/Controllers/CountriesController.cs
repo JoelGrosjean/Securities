@@ -36,6 +36,7 @@ namespace prog35142.week11.security.Controllers
         }
 
         // GET: Countries/Create
+        [Authorize(Users = "student@sheridancollege.ca")]
         public ActionResult Create()
         {
             return View();
