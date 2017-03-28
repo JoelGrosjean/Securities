@@ -10,11 +10,14 @@ using prog35142.week11.security.Models;
 
 namespace prog35142.week11.security.Controllers
 {
+    
+    [Authorize(Roles ="Admin")]
     public class AthletesController : Controller
     {
         private OlympicsContext db = new OlympicsContext();
 
         // GET: Athletes
+        [AllowAnonymous]
         public ActionResult Index()
         {
             var athletes = db.Athletes.Include(a => a.Country);
@@ -22,6 +25,7 @@ namespace prog35142.week11.security.Controllers
         }
 
         // GET: Athletes/Details/5
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)
